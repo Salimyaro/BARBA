@@ -752,6 +752,7 @@ img {
   padding: 8px 0px;
   background: transparent;
   border: transparent;
+  border-radius: 0;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   color: rgba(157, 164, 189, 0.4);
   transition: border 250ms linear, color 250ms linear;
