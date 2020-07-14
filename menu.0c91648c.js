@@ -117,83 +117,69 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
-
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
+})({"js/menu.js":[function(require,module,exports) {
+function myFunction(x) {
+  if (x.matches) {
+    (function () {
+      var menuBtnRef = document.querySelector("[data-menu-button]");
+      var menuLink1Ref = document.querySelector("[data-menu-link1]");
+      var menuLink2Ref = document.querySelector("[data-menu-link2]");
+      var menuLink3Ref = document.querySelector("[data-menu-link3]");
+      var menuLink4Ref = document.querySelector("[data-menu-link4]");
+      var menuLink5Ref = document.querySelector("[data-menu-link5]");
+      var mobileMenuRef = document.querySelector("[data-menu]");
+      var mobileBodyRef = document.querySelector("[data-body]");
+      menuBtnRef.addEventListener("click", function () {
+        var expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+        menuBtnRef.classList.toggle("is-open");
+        menuBtnRef.setAttribute("aria-expanded", !expanded);
+        mobileMenuRef.classList.toggle("is-open");
+        mobileBodyRef.classList.toggle("is-open");
+      });
+      menuLink1Ref.addEventListener("click", function () {
+        var expanded = menuLink1Ref.getAttribute("aria-expanded") === "true" || false;
+        menuBtnRef.classList.toggle("is-open");
+        menuBtnRef.setAttribute("aria-expanded", !expanded);
+        mobileMenuRef.classList.toggle("is-open");
+        mobileBodyRef.classList.toggle("is-open");
+      });
+      menuLink2Ref.addEventListener("click", function () {
+        var expanded = menuLink2Ref.getAttribute("aria-expanded") === "true" || false;
+        menuBtnRef.classList.toggle("is-open");
+        menuBtnRef.setAttribute("aria-expanded", !expanded);
+        mobileMenuRef.classList.toggle("is-open");
+        mobileBodyRef.classList.toggle("is-open");
+      });
+      menuLink3Ref.addEventListener("click", function () {
+        var expanded = menuLink3Ref.getAttribute("aria-expanded") === "true" || false;
+        menuBtnRef.classList.toggle("is-open");
+        menuBtnRef.setAttribute("aria-expanded", !expanded);
+        mobileMenuRef.classList.toggle("is-open");
+        mobileBodyRef.classList.toggle("is-open");
+      });
+      menuLink4Ref.addEventListener("click", function () {
+        var expanded = menuLink4Ref.getAttribute("aria-expanded") === "true" || false;
+        menuBtnRef.classList.toggle("is-open");
+        menuBtnRef.setAttribute("aria-expanded", !expanded);
+        mobileMenuRef.classList.toggle("is-open");
+        mobileBodyRef.classList.toggle("is-open");
+      });
+      menuLink5Ref.addEventListener("click", function () {
+        var expanded = menuLink5Ref.getAttribute("aria-expanded") === "true" || false;
+        menuBtnRef.classList.toggle("is-open");
+        menuBtnRef.setAttribute("aria-expanded", !expanded);
+        mobileMenuRef.classList.toggle("is-open");
+        mobileBodyRef.classList.toggle("is-open");
+      });
+    })();
   }
-
-  return bundleURL;
 }
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+var x = window.matchMedia("(max-width: 767px)");
+myFunction(x); // Вызов функции прослушивателя во время выполнения
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
-  };
-
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"sass/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\price\\bg-price-mobile.jpg":[["bg-price-mobile.0d406c4c.jpg","images/price/bg-price-mobile.jpg"],"images/price/bg-price-mobile.jpg"],"./..\\images\\price\\bg-price-mobile@2x.jpg":[["bg-price-mobile@2x.bd3eafc2.jpg","images/price/bg-price-mobile@2x.jpg"],"images/price/bg-price-mobile@2x.jpg"],"./..\\images\\price\\bg-price-tablet.jpg":[["bg-price-tablet.8f92d88d.jpg","images/price/bg-price-tablet.jpg"],"images/price/bg-price-tablet.jpg"],"./..\\images\\price\\bg-price-tablet@2x.jpg":[["bg-price-tablet@2x.babe5ed6.jpg","images/price/bg-price-tablet@2x.jpg"],"images/price/bg-price-tablet@2x.jpg"],"./..\\images\\price\\bg-price-desktop.jpg":[["bg-price-desktop.fe654cc5.jpg","images/price/bg-price-desktop.jpg"],"images/price/bg-price-desktop.jpg"],"./..\\images\\price\\bg-price-desktop@2x.jpg":[["bg-price-desktop@2x.4dcceda4.jpg","images/price/bg-price-desktop@2x.jpg"],"images/price/bg-price-desktop@2x.jpg"],"./..\\images\\contacts\\mobile.jpg":[["mobile.e6c1285a.jpg","images/contacts/mobile.jpg"],"images/contacts/mobile.jpg"],"./..\\images\\contacts\\mobile@2x.jpg":[["mobile@2x.717efd09.jpg","images/contacts/mobile@2x.jpg"],"images/contacts/mobile@2x.jpg"],"./..\\images\\contacts\\tablet.jpg":[["tablet.c4509875.jpg","images/contacts/tablet.jpg"],"images/contacts/tablet.jpg"],"./..\\images\\contacts\\tablet@2x.jpg":[["tablet@2x.c82497ee.jpg","images/contacts/tablet@2x.jpg"],"images/contacts/tablet@2x.jpg"],"./..\\images\\contacts\\desktop.jpg":[["desktop.150277d7.jpg","images/contacts/desktop.jpg"],"images/contacts/desktop.jpg"],"./..\\images\\contacts\\desktop@2x.jpg":[["desktop@2x.8b1c77c7.jpg","images/contacts/desktop@2x.jpg"],"images/contacts/desktop@2x.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.js":[function(require,module,exports) {
-"use strict";
-
-require("./sass/main.scss");
-},{"./sass/main.scss":"sass/main.scss"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+x.addListener(myFunction); // Присоединить функцию прослушивателя при изменении состояния
+},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -397,5 +383,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
-//# sourceMappingURL=/src.e31bb0bc.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/menu.js"], null)
+//# sourceMappingURL=/menu.0c91648c.js.map
