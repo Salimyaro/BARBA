@@ -1,0 +1,15 @@
+.section {
+  min-width: 280px;
+  @media screen and (max-width: $max-tablet) {
+    padding-top: 84px;
+    padding-bottom: 84px;
+  }
+  @media screen and (min-width: $min-tablet) and (max-width: $max-desktop) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}

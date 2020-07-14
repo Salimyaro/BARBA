@@ -1,0 +1,61 @@
+.social {
+  @extend %list;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+.social__item:not(:last-child) {
+  margin-right: 10px;
+}
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: $light-bg-color;
+  color: $primary-text-color;
+  transition: color 250ms linear;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+.social__icons {
+  fill: currentColor;
+}
+.barber-shop-social {
+  @extend %list;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before {
+    content: '';
+    margin-right: 40px;
+    display: block;
+    width: 60px;
+    height: 1px;
+    background-color: $dark-heading-color;
+  }
+}
+.barber-shop-social__item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+.barber-shop-social__link {
+  display: block;
+  padding: 20px 0px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.2em;
+  color: $dark-heading-color;
+  transition: color 250ms linear;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}

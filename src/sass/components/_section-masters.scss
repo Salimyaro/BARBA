@@ -1,0 +1,70 @@
+.masters {
+  background-color: $grey-bg-color;
+}
+.masters__container {
+  @media screen and (min-width: $min-tablet) and (max-width: $max-desktop){
+    width: 528px;
+  }
+}
+.masters__slogan {
+  @extend %slogan;
+}
+.masters__title {
+  @extend %title;
+}
+.masters__team-list {
+	@extend %list;
+	@media screen and (min-width: $min-desktop) {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: -15px;
+	}
+}
+.masters__team-item{
+	@media screen and (min-width: $min-desktop) {
+		margin: 15px;
+	}
+}
+.masters__team-item:not(:last-child) {
+  @media screen and (max-width: $max-desktop) {
+    margin-bottom: 64px;
+  }
+}
+.masters__image-thumb {
+  margin-bottom: 30px;
+  @media screen and (min-width: $min-mobile) {
+    width: 418px;
+    height: 346px;
+  }
+  @media screen and (min-width: $min-tablet) {
+    width: 450px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    width: 370px;
+  }
+}
+.masters__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.masters__name {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.39;
+  text-align: center;
+}
+
+.masters__position {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  color: $accent-color;
+
+  text-align: center;
+}

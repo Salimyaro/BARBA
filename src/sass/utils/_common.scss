@@ -1,0 +1,43 @@
+body {
+  background-color: $light-bg-color;
+  font-family: 'Open Sans', sans-serif;
+  color: $primary-text-color;
+  letter-spacing: 0.03em;
+}
+
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Raleway', sans-serif;
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 31px;
+  padding-left: 31px;
+  min-width: 280px;
+  @media screen and (max-width: 400px) {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  @media screen and (min-width: $min-mobile) and (max-width: $max-tablet) {
+    width: 480px;
+  }
+  @media screen and (min-width: $min-tablet) and (max-width: $max-desktop) {
+    width: 768px;
+    padding-right: 39px;
+    padding-left: 39px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    width: 1280px;
+    padding-right: 55px;
+    padding-left: 55px;
+  }
+}
+.anchor{
+  text-decoration: none;
+}

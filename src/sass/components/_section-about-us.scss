@@ -1,0 +1,65 @@
+.about-us {
+}
+.about-us__container {
+  @media screen and (min-width: $min-tablet) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.about-us__image-list {
+  @extend %list;
+  display: none;
+  margin-right: 30px;
+  @media screen and (min-width: $min-tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: $min-desktop) {
+    flex-direction: row;
+    margin-right: 64px;
+  }
+}
+.about-us__image-item:not(:last-child) {
+  @media screen and (min-width: $min-tablet) and (max-width: $max-desktop) {
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: $min-desktop) {
+    margin-right: 30px;
+  }
+}
+.about-us__image {
+  max-width: 330px;
+  @media screen and (min-width: $min-desktop) {
+    max-width: 270px;
+  }
+}
+.about-us__slogan {
+  @extend %slogan;
+}
+.about-us__title {
+  @extend %title;
+  margin-bottom: 20px;
+  @media screen and (max-width: $max-desktop) {
+    font-size: 28px;
+    line-height: 1.18;
+    max-width: 330px;
+  }
+}
+.about-us__sub-title {
+  @extend %text;
+  font-size: 16px;
+  line-height: 1.63;
+  margin-bottom: 20px;
+  @media screen and (min-width: $min-desktop) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+.about-us__text {
+  @extend %text;
+  margin-bottom: 40px;
+}
+.about-us__button {
+	margin-left: 0;
+}

@@ -1,0 +1,176 @@
+.price-thumb{
+  max-width: 480px;
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      90deg,
+      $transparent-bg-color 0%,
+      $transparent-bg-color 100%
+    ),
+    url(../images/price/bg-price-mobile.jpg);
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        90deg,
+        $transparent-bg-color 0%,
+        $transparent-bg-color 100%
+      ),
+      url(../images/price/bg-price-mobile@2x.jpg);
+  }
+  @media screen and (min-width: $min-mobile + 1) {
+    max-width: 768px;
+    background-image: linear-gradient(
+        90deg,
+        $transparent-bg-color 0%,
+        $transparent-bg-color 100%
+      ),
+      url(../images/price/bg-price-tablet.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          90deg,
+          $transparent-bg-color 0%,
+          $transparent-bg-color 100%
+        ),
+        url(../images/price/bg-price-tablet@2x.jpg);
+    }
+  }
+  @media screen and (min-width: $min-tablet + 1) {
+    max-width: 100%;
+    background-image: linear-gradient(
+        90deg,
+        $transparent-bg-color 0%,
+        $transparent-bg-color 100%
+      ),
+      url(../images/price/bg-price-desktop.jpg);
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          90deg,
+          $transparent-bg-color 0%,
+          $transparent-bg-color 100%
+        ),
+        url(../images/price/bg-price-desktop@2x.jpg);
+    }
+  }
+
+}
+.price {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.price__slogan {
+  @extend %slogan;
+  color: $secondary-text-color;
+  opacity: 60%;
+  &::before {
+    background-color: $secondary-text-color;
+  }
+}
+
+.price__title {
+  @extend %title;
+  color: $light-heading-color;
+}
+
+.price__list-thump {
+  margin-bottom: 50px;
+  @media screen and (max-width: 400px) {
+    padding: 15px;
+  }
+  @media screen and (min-width: 401px) and (max-width: $max-tablet) {
+    padding: 30px;
+  }
+
+  @media screen and (min-width: $min-desktop) {
+    display: flex;
+  }
+
+  @media screen and (min-width: $min-tablet) and (max-width: $max-desktop) {
+    padding: 30px 40px;
+  }
+
+  @media screen and (max-width: $max-desktop) {
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+
+.price__list {
+  @extend %list;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 2.14;
+
+  letter-spacing: 0.02em;
+  @media screen and (max-width: 400px) {
+    font-size: 12px;
+  }
+
+  @media screen and (min-width: $min-tablet) {
+    font-size: 18px;
+    line-height: 1.66;
+  }
+
+  @media screen and (max-width: $max-desktop) {
+    &:nth-child(1) {
+      margin-bottom: 20px;
+    }
+  }
+
+  @media screen and (min-width: $min-desktop) {
+    padding: 30px 40px;
+    &:nth-child(1) {
+      width: 50%;
+      background: linear-gradient(
+        180deg,
+        #171a24 0%,
+        rgba(23, 26, 36, 0.2) 100%
+      );
+    }
+
+    &:nth-child(2) {
+      width: 50%;
+      background: linear-gradient(
+        180deg,
+        #090b13 0%,
+        rgba(9, 11, 19, 0.2) 100%
+      );
+    }
+  }
+}
+
+.price__item {
+  display: flex;
+  justify-content: space-between;
+  color: $secondary-text-color;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+
+.price__service-name {
+  margin: 0;
+  padding: 0;
+  flex-grow: 1;
+  display: flex;
+  align-items: baseline;
+}
+
+.price__service-name::after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+}
+
+.price__service-price {
+  margin: 0;
+  padding: 0;
+}

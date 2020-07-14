@@ -1,0 +1,27 @@
+.record-button {
+  display: block;
+  min-width: 160px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: 1px solid $accent-color;
+  border-radius: 25px;
+  background: none;
+  color: $light-link-color;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  outline: none;
+  margin-left: auto;
+  margin-right: auto;
+  transition: color 250ms linear, background-color 250ms linear;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $light-link-color;
+  }
+}
+.record-button--white{
+  color: $dark-link-color;
+}
