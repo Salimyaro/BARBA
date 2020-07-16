@@ -16,7 +16,7 @@
   border-radius: 50%;
   background-color: $light-bg-color;
   color: $primary-text-color;
-  transition: color 250ms linear;
+  transition: color 250ms $cubic;
   &:hover,
   &:focus {
     color: $accent-color;
@@ -31,7 +31,7 @@
   align-items: center;
   justify-content: center;
   &::before {
-    content: '';
+    content: "";
     margin-right: 40px;
     display: block;
     width: 60px;
@@ -43,6 +43,13 @@
   &:not(:last-child) {
     margin-right: 40px;
   }
+  &--header {
+    &:not(:first-child) {
+      @media screen and (max-width: $max-tablet) {
+        margin-left: 100px;
+      }
+    }
+  }
 }
 .barber-shop-social__link {
   display: block;
@@ -53,9 +60,14 @@
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: $dark-heading-color;
-  transition: color 250ms linear;
+  transition: color 250ms $cubic;
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+  &--header {
+    @media screen and (max-width: $max-tablet) {
+      padding: 12px 0px;
+    }
   }
 }

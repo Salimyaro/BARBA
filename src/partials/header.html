@@ -1,0 +1,85 @@
+<header class="header">
+  <div class="container header__container">
+    <svg class="header__logo" width="69" height="56" aria-label="логотип">
+      <use class="header__logo-icon" href="./images/sprite.svg#icon-logo"></use>
+    </svg>
+    <button
+      type="button"
+      class="menu__button"
+      aria-expanded="false"
+      data-menu-button
+    >
+      <svg
+        class="menu__icon"
+        width="40"
+        height="40"
+        aria-label="переключатель мобильного меню"
+      >
+        <use
+          class="menu__icon-close"
+          href="./images/sprite.svg#icon-menu-close"
+        ></use>
+        <use
+          class="menu__icon-open"
+          href="./images/sprite.svg#icon-menu-open"
+        ></use>
+      </svg>
+    </button>
+    <div class="menu__mobile" data-menu>
+      <div class="menu__content">
+        <nav class="nav">
+          <ul class="menu__nav">
+            <li class="menu__item">
+              <a class="menu__link" href="#about-us" data-menu-link1>О нас</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#price" data-menu-link2
+                >Услуги и цены</a
+              >
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#masters" data-menu-link3>Мастера</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#contacts" data-menu-link4
+                >Контакты</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="menu__half-thumb">
+          <address class="header-tel">
+            <a href="tel:+380441111111" class="header-tel__link"
+              >+38 044 111 11 11
+            </a>
+          </address>
+          <a
+            class="record-button record-button--white header__button anchor"
+            href="#online-record"
+            class="anchor"
+            data-menu-link5
+            >Онлайн-Запись</a
+          >
+        </div>
+        <ul class="barber-shop-social header__social">
+          <li class="barber-shop-social__item barber-shop-social__item--header">
+            <a
+              class="barber-shop-social__link barber-shop-social__link--header"
+              href=""
+              lang="en"
+              >Instagram</a
+            >
+          </li>
+          <li class="barber-shop-social__item barber-shop-social__item--header">
+            <a
+              class="barber-shop-social__link barber-shop-social__link--header"
+              href=""
+              lang="en"
+              >Youtube</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>

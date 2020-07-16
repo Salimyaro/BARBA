@@ -1,16 +1,17 @@
 .footer {
-	padding-top: 24px;
-	padding-bottom: 44px;
-	@media screen and (min-width: $min-tablet){
-		padding: 36px 0px;
-	}
+  padding-top: 24px;
+  padding-bottom: 44px;
+  background-color: $grey-bg-color;
+  @media screen and (min-width: $min-tablet) {
+    padding: 36px 0px;
+  }
 }
 .footer__container {
-	display: flex;
-	flex-direction: column-reverse;
-	@media screen and (min-width: $min-tablet){
-		flex-direction: row;
-	}
+  display: flex;
+  flex-direction: column-reverse;
+  @media screen and (min-width: $min-tablet) {
+    flex-direction: row;
+  }
 }
 .footer__copyright {
   display: flex;
@@ -25,6 +26,6 @@
     margin-left: 6px;
   }
 }
-.footer__social{
-	margin-left: auto;
+.footer__social {
+  margin-left: auto;
 }

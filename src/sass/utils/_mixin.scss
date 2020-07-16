@@ -1,7 +1,1 @@
-@mixin price-resolution($ration, $bg-name) {
-  @media screen and (min-device-pixel-ratio: $ration),
-    screen and (min-resolution: 96dpi*$ration),
-    screen and (min-resolution: 1ddpx*$ration) {
-    background-image: url(../images/price/#{$bg-name});
-  }
-}
+
