@@ -53,35 +53,22 @@
     bottom: 0;
     right: 0;
   }
-  @media screen and (min-width:$min-desktop){
+  @media screen and (min-width: $min-desktop) {
     right: 50%;
     transform: translateX(623px);
-
   }
 }
 .slider__buttons-item {
   text-align: end;
+  outline: none;
+  cursor: pointer;
+  color: $trans-heading-color;
   &:not(:last-child) {
     margin-right: 26px;
     text-align: start;
   }
-}
-.slider__buttons-text {
-  border: none;
-  border-radius: 0;
-  padding: 8px 0px 0px 0px;
-  background-color: transparent;
-  color: $trans-heading-color;
-  cursor: pointer;
-  outline: none;
-  font-weight: 600;
-  font-size: 11px;
-  line-height: 1.36;
-  letter-spacing: 0.1em;
-  text-align: inherit;
-  transition: color 250ms $cubic;
   &::after {
-    content: "";
+    content: '';
     display: block;
     width: 60px;
     height: 1px;
@@ -96,6 +83,15 @@
       background-color: $light-heading-color;
     }
   }
+}
+.slider__buttons-text {
+  padding: 8px 0px 0px 0px;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-align: inherit;
+  transition: color 250ms $cubic;
 }
 .slider__checkbox {
   display: none;
@@ -116,11 +112,11 @@
   height: 2px;
   background: $secondary-text-color;
   transition: background-color 250ms $cubic, width 500ms $cubic;
-  &:not(:last-child){
+  &:not(:last-child) {
     margin-bottom: 12px;
   }
 }
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   width: 18px;
   background-color: $light-color;
 }
@@ -131,10 +127,10 @@
   top: 50%;
   left: 50%;
   transform: translate3d(-50%, -50%, 0px);
-  @media screen and (min-width: $min-tablet) and (max-width:$max-desktop) {
+  @media screen and (min-width: $min-tablet) and (max-width: $max-desktop) {
     left: 61%;
   }
-  @media screen and (min-width:$min-desktop) {
+  @media screen and (min-width: $min-desktop) {
     transform: translate3d(-80%, -50%, 0px);
     padding: 0;
   }
